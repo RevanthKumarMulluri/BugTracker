@@ -1,0 +1,9 @@
+@import '../../colors/colors';
+
+.login-form{
+    margin-top: 2rem;
+   &-field {
+       width:20rem;
+   }
+
+}
