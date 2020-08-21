@@ -1,0 +1,33 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$my-theme-primary : mat-palette($mat-green);
+$my-theme-accent:  mat-palette($mat-green, A200, A100, A400);
+$my-theme-warn:    mat-palette($mat-red);
+
+
+$my-theme: mat-light-theme((
+  color: (
+    primary: $my-theme-primary,
+    accent: $my-theme-accent,
+    warn: $my-theme-warn,  
+  )
+));
+
+@include angular-material-theme($my-theme);
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto, monospace',
+  $headline: mat-typography-level(1.5rem,2,700),
+  $body-1: mat-typography-level(1rem,1.6,500)
+);
+
+//@include mat-base-typography($custom-typography);
+
+// Override typography for a specific Angular Material components.
+//@include mat-checkbox-typography($custom-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($custom-typography);
+
