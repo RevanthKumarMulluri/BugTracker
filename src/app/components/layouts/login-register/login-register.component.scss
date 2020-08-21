@@ -8,13 +8,15 @@
 .login-card {
     max-width: 50rem;
     margin: 8rem auto;
-    padding: 8rem;
+    padding: 3rem;
     min-height: 15rem;
     display :flex;
     flex-direction: column;
     align-items: center;
     box-shadow: $box-shadow-dark;
 }
+
+
 
 .tab-group {
     margin : 2rem 5rem;
