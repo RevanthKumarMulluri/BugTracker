@@ -9,17 +9,24 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button'
 
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginRegisterComponent } from './components/layouts/login-register/login-register.component';
+import { ToolbarComponent } from './components/layouts/toolbar/toolbar.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    LoginRegisterComponent
+    LoginRegisterComponent,
+    ToolbarComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +35,10 @@ import { LoginRegisterComponent } from './components/layouts/login-register/logi
     MatCardModule,
     MatInputModule,
     MatFormFieldModule,
-    MatTabsModule
+    MatTabsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

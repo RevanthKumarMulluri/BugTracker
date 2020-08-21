@@ -1,0 +1,16 @@
+<mat-toolbar color='accent' class='toolbar'>
+    <mat-toolbar-row class='toolbar-row'>
+        <a mat-button [routerLink]="''">
+            <div class='toolbar-row-logo'>
+                <img src='assets/images/bugcircle.png' class='logo'>
+                <h1 class='toolbar-row-header'>Bug Tracker</h1>
+            </div>
+        </a>
+        <div class='toolbar-row-links'>
+            <a mat-button [routerLink]="'/Projects'"> Projects </a>
+            <search></search>
+            <a mat-button [routerLink]="'/create-account'"> Create </a>
+            <a mat-button [routerLink]="'/activities'"> Account </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
