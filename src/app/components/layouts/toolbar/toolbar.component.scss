@@ -21,13 +21,13 @@
             flex: 1;
             display: flex;
             justify-content: space-around;
-            
             align-items: stretch;
+            
+            & > * {
+                padding: 0.85rem;
+            }
         }
 
-        &-links > * {
-            padding: 0.85rem;
-        }
     }
 }
 
@@ -44,4 +44,8 @@ a:hover{
     margin-right : 0.7rem;
     height :4rem;
     width:4rem;
+}
+
+.search {
+    flex: 0 0 40%;
 }
