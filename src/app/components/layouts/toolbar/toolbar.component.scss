@@ -21,8 +21,12 @@
             flex: 1;
             display: flex;
             justify-content: space-around;
-         
+            
             align-items: stretch;
+        }
+
+        &-links > * {
+            padding: 0.85rem;
         }
     }
 }
