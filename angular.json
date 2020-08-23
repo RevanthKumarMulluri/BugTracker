@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "BugTracker"
+  "defaultProject": "BugTracker",
+  "cli": {
+    "analytics": false
+  }
 }

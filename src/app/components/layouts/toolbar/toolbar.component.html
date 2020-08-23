@@ -9,9 +9,10 @@
         <div class='toolbar-row-links'>
             <a mat-button [routerLink]="'/Projects'"> Projects </a>
             <search class='search'></search>
-            <a mat-button [routerLink]="'/create-account'"> Create </a>
+            <a mat-button (click)='show = !show'>Create </a>
             <a mat-button [routerLink]="'/login'"> Login </a>
             <!-- <a mat-button [routerLink]="'/activities'"> Account </a> -->
         </div>
     </mat-toolbar-row>
 </mat-toolbar>
+<bugcreate *ngIf='show' (onCloseReq)='closeModal($event)'></bugcreate>

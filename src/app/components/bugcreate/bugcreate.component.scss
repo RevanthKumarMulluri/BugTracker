@@ -1,0 +1,30 @@
+@import '../../colors/colors';
+
+
+.modal-card{
+    width: 100%;
+    height: 100%;
+    top:0;
+    position:absolute;
+    background-color:rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-card {
+    border-radius: 5px;
+    padding: 1rem;
+    width: 70rem;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.close {
+    right: 1rem;
+    position: absolute;
+    font-size: 3rem;
+    top:0;
+    transform: rotate(45deg);
+    cursor: pointer;
+}

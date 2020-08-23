@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
+  
+  show : boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  closeModal($event){
+    this.show=$event;
   }
 
 }
