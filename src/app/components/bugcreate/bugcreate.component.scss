@@ -15,9 +15,15 @@
 .create-card {
     border-radius: 5px;
     padding: 1rem;
-    width: 70rem;
-    margin: 2rem auto;
+    min-width: 70rem;
+    margin: 2rem;
     position: relative;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
 }
 
 .close {
