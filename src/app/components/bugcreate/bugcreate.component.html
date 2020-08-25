@@ -2,14 +2,23 @@
     <mat-card class='create-card'>
         <div class='close' (click)='onClose(false)'>+</div>
         <mat-card-title class='create-card-title'>Create Issue</mat-card-title>
-        <mat-card-content class='create-card-content'>
             <form class='create-form'>
+                <mat-card-content class='create-card-content'>
                 <mat-form-field appearance="outline" class='create-form-field'>
                     <mat-label class='create-form-label'>Select A Project</mat-label>
                     <mat-select [(value)]="selected" class='create-form-select'>
                       <mat-option>None</mat-option>
                       <mat-option value="project1">Project 1</mat-option>
                       <mat-option value="project2">Project 2</mat-option>
+                    </mat-select>
+                </mat-form-field><br>
+                <mat-form-field appearance="outline" class='create-form-field'>
+                    <mat-label class='create-form-label'>Issue Type</mat-label>
+                    <mat-select [(value)]="selected" class='create-form-select'>
+                      <mat-option>None</mat-option>
+                      <mat-option value="bug">Bug</mat-option>
+                      <mat-option value="story">Story</mat-option>
+                      <mat-option value="enhancement">Enhancement</mat-option>
                     </mat-select>
                 </mat-form-field><br>
                 <mat-form-field appearance="outline" class='create-form-field'>
@@ -27,8 +36,20 @@
                 <mat-form-field appearance="outline" class='create-form-field'>
                     <mat-label class='create-form-label'>Remaining Time</mat-label>
                     <input matInput name='remaining' class='create-form-input'>
+                </mat-form-field><br>
+                <mat-form-field appearance="outline" class='create-form-field'>
+                    <mat-label class='create-form-label'>Assignee</mat-label>
+                    <input matInput name='assignee' class='create-form-input'>
+                </mat-form-field><br>
+                <mat-form-field appearance="outline" class='create-form-field'>
+                    <mat-label class='create-form-label'>Release Notes</mat-label>
+                    <textarea matInput name='releasenotes' class='create-form-textarea'></textarea>
                 </mat-form-field>
+            </mat-card-content>
+            <div class="button-div">
+                <button mat-flat-button color="primary" class='create-button'>Create</button>
+            </div>
             </form>
-        </mat-card-content>
+
     </mat-card>
 </div>
