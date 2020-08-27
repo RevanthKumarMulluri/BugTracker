@@ -15,6 +15,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {MatListModule} from '@angular/material/list';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
@@ -63,6 +64,7 @@ import { FilterpipePipe } from './pipes/filterpipe.pipe';
     MatSelectModule,
     MatTableModule,
     MatListModule,
+    MatProgressSpinnerModule,
     AngularFireModule.initializeApp(environment.firebaseConfig,'BugTracker'),
     AngularFireAuthModule,
     AngularFirestoreModule,

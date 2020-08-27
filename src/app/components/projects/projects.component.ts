@@ -15,21 +15,28 @@ export class ProjectsComponent implements OnInit {
   success:boolean = false;
   error:boolean = false;
   errorMsg = "";
+  showSpinner : boolean = false;
   
 
   constructor(private projectservice : ProjectService) { 
-    this.projectservice.getProjects().subscribe(projects => {
-        this.projects= projects.map(p => {
-          return {
-            key:p.payload.doc.id,
-            ...p.payload.doc.data()
-          } as Project
-        })
-    });
+    this.getProjects();
   }
 
   ngOnInit(): void {
     
+  }
+
+  getProjects(){
+    this.showSpinner=!this.showSpinner;
+    this.projectservice.getProjects().subscribe(projects => {
+      this.projects= projects.map(p => {
+        this.showSpinner=false;
+        return {
+          key:p.payload.doc.id,
+          ...p.payload.doc.data()
+        } as Project
+      })
+  });
   }
 
 
