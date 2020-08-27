@@ -31,6 +31,7 @@ import { BugcreateComponent } from './components/bugcreate/bugcreate.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { DatatableComponent } from './components/datatable/datatable.component';
 import { DatalistComponent } from './components/datalist/datalist.component';
+import { FilterpipePipe } from './pipes/filterpipe.pipe';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { DatalistComponent } from './components/datalist/datalist.component';
     ProjectsComponent,
     DatatableComponent,
     DatalistComponent,
+    FilterpipePipe,
 
   ],
   imports: [
