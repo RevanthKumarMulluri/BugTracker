@@ -1,0 +1,28 @@
+@import '../../colors/colors';
+
+
+.project-add {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-list {
+    margin: 5rem 20rem;
+    padding: 3rem;
+}
+
+
+.project {
+    margin : 2rem 5rem;
+    &-update-button {
+        float: left;
+    }
+
+    &-delete-button {
+        float: right;
+    }
+
+
+}
