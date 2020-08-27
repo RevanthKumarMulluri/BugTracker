@@ -9,6 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class ProjectsComponent implements OnInit {
   projects;
+  searchText:string = '';
   success:boolean = false;
   error:boolean = false;
   errorMsg = "";

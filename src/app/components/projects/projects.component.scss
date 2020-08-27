@@ -1,28 +1,40 @@
 @import '../../colors/colors';
 
 
-.project-add {
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  grid-column-gap: 25px;
+  margin-top: 30px;
+
+  &-add {
+      padding: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-self: flex-end;
+      width:20vw;
+  }
+
+ 
+
+  &-filter-field {
+    padding: 2rem 0;
+    width:20vw;
+  }
 }
 
 .project-list {
-    margin: 5rem 20rem;
-    padding: 3rem;
+    margin :1rem 5rem;
+    padding: 0 13rem;
+    grid-column: 1/-1;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-
-.project {
-    margin : 2rem 5rem;
-    &-update-button {
-        float: left;
-    }
-
-    &-delete-button {
-        float: right;
-    }
-
-
+.project-delete-button{
+    width :40vw;
+    align-self: center;
 }
+

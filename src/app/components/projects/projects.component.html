@@ -1,21 +1,24 @@
-<form class="project-add" #addProject="ngForm" (ngSubmit) = "onSubmit(addProject)">
+<div class="project">
+  <form class="project-add" #addProject="ngForm" (ngSubmit) = "onSubmit(addProject)">
     <strong *ngIf='success'>Project is added</strong>
     <strong *ngIf='error'>{{errorMsg}}</strong>
     <mat-form-field appearance="outline" class='project-field'>
         <mat-label class='project-label'>Project Name</mat-label>
         <input matInput name='projectname' class='project-input'  ngModel required>
-    </mat-form-field>
+    </mat-form-field><br>
     <button mat-flat-button color="primary" class='project-add-button' [disabled]="!addProject.valid">Add</button>
 </form>
+<mat-form-field appearance="outline" class='project-filter-field'>
+  <mat-label class='project-filter-label'>Filter Projects</mat-label>
+  <input matInput class='project-input'  [(ngModel)]="searchText">
+</mat-form-field>
 <div class='project-list'>
     <mat-selection-list #shoes>
-        <mat-list-option *ngFor="let project of projects">
+        <mat-list-option *ngFor="let project of projects | filterpipe : searchText">
           {{project}}
         </mat-list-option>
-      </mat-selection-list>
-      <div class='project'>
-        <button mat-flat-button color="accent" class='project-update-button'>Update</button>
+      </mat-selection-list><br>
         <button mat-flat-button color="warn" class='project-delete-button'>Delete</button>
-      </div>
   </div>
+</div>
 
