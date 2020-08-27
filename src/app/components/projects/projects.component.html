@@ -4,7 +4,7 @@
     <strong *ngIf='error'>{{errorMsg}}</strong>
     <mat-form-field appearance="outline" class='project-field'>
         <mat-label class='project-label'>Project Name</mat-label>
-        <input matInput name='projectname' class='project-input'  ngModel required>
+        <input matInput class='project-input' name='projectname' ngModel required>
     </mat-form-field><br>
     <button mat-flat-button color="primary" class='project-add-button' [disabled]="!addProject.valid">Add</button>
 </form>
@@ -13,12 +13,16 @@
   <input matInput class='project-input'  [(ngModel)]="searchText">
 </mat-form-field>
 <div class='project-list'>
-    <mat-selection-list #shoes>
-        <mat-list-option *ngFor="let project of projects | filterpipe : searchText">
-          {{project}}
+    <mat-selection-list #projectslist [(ngModel)]="selectedRowsChecked">
+        <mat-list-option *ngFor="let project of projects | filterpipe:searchText" [value]="project.key">
+          {{project.name}}
         </mat-list-option>
       </mat-selection-list><br>
-        <button mat-flat-button color="warn" class='project-delete-button'>Delete</button>
+      <p>
+         <strong>Options selected: {{projectslist.selectedOptions.selected.length}}</strong>
+      </p>
+        <button  mat-flat-button color="warn" class='project-delete-button' (click)="deleteProjects()">Delete</button>
   </div>
+  
 </div>
 

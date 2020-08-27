@@ -13,8 +13,11 @@ export class FilterpipePipe implements PipeTransform {
       return items;
     }
     searchText = searchText.toLocaleLowerCase();
+    console.log(items);
     return items.filter(it => {
-      return it.toLocaleLowerCase().includes(searchText);
+      if(it.name.toLocaleLowerCase().includes(searchText)){
+         return it.name.toLocaleLowerCase().bold();
+      };
     });
   }
 
